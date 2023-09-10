@@ -1,17 +1,23 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * _abs - compute the absolute value of an integer
- * @n: int type number
- * Return: absolute value of @n
+ * _strcpy - copies the string pointed to by src,
+ * including the terminating null byte, to the
+ * buffer pointed to by dest.
+ * @dest: destination.
+ * @src: source.
+ * Return: the pointer to dest.
  */
-int _abs(int n)
+char *_strcpy(char *dest, char *src)
 {
-	if (n < 0)
+	int count = 0;
+
+	while (count >= 0)
 	{
-		return (n * -1);
+		*(dest + count) = *(src + count);
+		if (*(src + count) == '\0')
+			break;
+		count++;
 	}
-	else
-	{
-		return (n);
-	}
+	return (dest);
 }
